@@ -59,7 +59,7 @@ public class UsrArticleController {
 	public String doWrite(String title, String body) {
 
 		ResultData<Integer> writeArticleRd = articleService.writeArticle(title, body);
-
+		
 
 		return Ut.jsReplace(writeArticleRd.getResultCode(), writeArticleRd.getMsg(),
 				"../article/list");
